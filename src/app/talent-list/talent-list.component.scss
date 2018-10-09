@@ -1,0 +1,73 @@
+:host  {
+    background: url('assets/images/img_TalentBG1.png') no-repeat;
+    display: block;
+    width: 868px;
+}
+
+.talents-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 580px;
+    height: 580px;
+    margin: 0 0 0 80px;
+}
+
+.btn-wrapper-reset {
+    color: white;
+    background-image: url('assets/images/img_TalentBG2.png');
+    background-repeat: no-repeat;
+    padding: 6px 0;
+
+    text-align: center;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    button {
+        float: right;
+        margin: 0 1em;
+    }
+}
+
+.btn-wrapper-generate {
+    padding: 6px 10px;
+
+    text-align: center;
+    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.commander-icon {
+    width: 36px;
+    height: 36px;
+    background: black;
+
+    position: absolute;
+    left: 280px;
+    top: 275px;
+}
+
+ngx-smart-modal {
+    text-align: center;
+
+    .modal-input-wrapper {
+        display: flex;
+        margin: 1em 0;
+        
+        input {
+            flex-grow: 1;
+            margin: 0;
+            border-radius: .5em 0 0 .5em;
+        }
+
+        button {
+            margin: 0;
+            color: white;
+            border-radius: 0 .5em .5em 0;
+            padding: .1em 1em;
+        }
+    }
+}

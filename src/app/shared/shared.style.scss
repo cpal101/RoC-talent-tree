@@ -1,0 +1,65 @@
+
+@font-face {
+    font-family: NotoSansHans;
+    src: url("assets/NotoSansHans-Black.otf") format("opentype");
+}
+
+body {
+    font-family: NotoSansHans;
+    font-size: 11pt;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: url('assets/images/img_commander_background_germany.jpg') no-repeat 0 0/100%;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+@mixin btn-color($color-dark, $color-primary, $color-highlight, $color-inset-shadow, $color-text) {
+    // background: linear-gradient(to bottom, $gradient-begin 0%, $gradient-begin 50%,$gradient-end 100%);
+    background-color: $color-primary;
+    border-color: $color-dark;
+    border-width: 0 2px 3px 2px;
+    border-style: solid;
+    box-shadow: inset 0px -2px 5px $color-inset-shadow, 
+                      0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+    color: $color-text;
+    text-shadow: 0 1px $color-highlight;
+
+    &:active:enabled {
+        box-shadow: inset 0px -2px 5px $color-inset-shadow;
+    }
+}
+
+.btn {
+    padding: .3em;
+    margin-top: 1em;
+    border: unset;
+    border-radius: .2em;
+    font-weight: 900;
+    font-size: 12pt;
+
+    border-width: 0 2px 3px 2px;
+    border-style: solid;
+    transition: all .3s cubic-bezier(.25,.8,.25,1);
+    margin-right: 1em;
+
+    &:hover:enabled {
+        cursor: pointer;
+    }
+    &:active:enabled {
+        transform: scale(.9);
+    }
+    &:disabled {
+        filter: saturate(0);
+    }
+    &.btn-blue {
+        @include btn-color(#0b81c5, #00ceff, #7fd0ef, #0590d3, #1b86c6);
+    }
+    &.btn-red {
+        @include btn-color(#632326, #d8483a, #d05852, #b62321, #a11a1a);
+    }
+}
