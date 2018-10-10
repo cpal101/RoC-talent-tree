@@ -52,7 +52,7 @@ module.exports = "<!-- <app-talent-list></app-talent-list> -->\r\n<router-outlet
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  height: 100%;\n  display: block; }\n"
+module.exports = ":host {\n  height: 100%;\n  display: block;\n  overflow: auto; }\n"
 
 /***/ }),
 
@@ -217,7 +217,7 @@ exports.talentListBuilder = new TalentListBuilder();
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"talents-wrapper\">\r\n    <app-talent *ngFor=\"let talentKV of talents| keyvalue\" [talent]=\"talentKV.value\" [getTalentFunction]=\"getTalent\"\r\n        (eventTalentSelected)=\"closeAllTalents()\" [ngStyle]=\"talentKV.value.coordinate\">\r\n        test\r\n    </app-talent>\r\n    <div class=\"commander-icon\"></div>\r\n</div>\r\n<div class=\"btn-wrapper-reset\">\r\n    Total Points: {{totalPoints}} <button class=\"btn btn-red\" (click)=\"reset()\">Reset</button>\r\n</div>\r\n<div class=\"btn-wrapper-generate\">\r\n    <button class=\"btn btn-blue\" (click)=\"ngxSmartModalService.getModal('shareModal').open()\">Share</button>\r\n</div>\r\n<ngx-smart-modal #shareModal identifier=\"shareModal\">\r\n    <p>Share this URL to whom you want to share the app-talent tree.</p>\r\n    <div class=\"modal-input-wrapper\">\r\n        <input #inputTarget type=\"text\" [value]=\"shareableLink\"/>\r\n        <button class=\"btn btn-blue\" [ngxClipboard]=\"inputTarget\"><fa-icon icon=\"clipboard\"></fa-icon></button>\r\n    </div>\r\n\r\n    <button class=\"btn btn-red\" (click)=\"shareModal.close()\">Close</button>\r\n</ngx-smart-modal>"
+module.exports = "<div class=\"talents-wrapper\">\r\n    <app-talent *ngFor=\"let talentKV of talents| keyvalue\" [talent]=\"talentKV.value\" [getTalentFunction]=\"getTalent\"\r\n        (eventTalentSelected)=\"closeAllTalents()\" [ngStyle]=\"talentKV.value.coordinate\">\r\n        test\r\n    </app-talent>\r\n    <div class=\"commander-icon\"></div>\r\n</div>\r\n<div class=\"viewport\">\r\n    <div class=\"btn-wrapper-reset\">\r\n        Total Points: {{totalPoints}} <button class=\"btn btn-red\" (click)=\"reset()\">Reset</button>\r\n    </div>\r\n    <div class=\"btn-wrapper-generate\">\r\n        <button class=\"btn btn-blue\" (click)=\"ngxSmartModalService.getModal('shareModal').open()\">Share</button>\r\n    </div>\r\n</div>\r\n<ngx-smart-modal #shareModal identifier=\"shareModal\">\r\n    <p>Share this URL to whom you want to share the app-talent tree.</p>\r\n    <div class=\"modal-input-wrapper\">\r\n        <input #inputTarget type=\"text\" [value]=\"shareableLink\"/>\r\n        <button class=\"btn btn-blue\" [ngxClipboard]=\"inputTarget\"><fa-icon icon=\"clipboard\"></fa-icon></button>\r\n    </div>\r\n\r\n    <button class=\"btn btn-red\" (click)=\"shareModal.close()\">Close</button>\r\n</ngx-smart-modal>"
 
 /***/ }),
 
