@@ -41,7 +41,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <app-talent-list></app-talent-list> -->\r\n<router-outlet></router-outlet>"
+module.exports = "<!-- <app-talent-list></app-talent-list> -->\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<!-- <app-talent-list></app-talent-list> -->\r\n<router-outlet
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  height: 100%;\n  display: block;\n  overflow: auto; }\n"
+module.exports = ":host {\n  height: 100%;\n  display: block;\n  overflow: auto;\n  zoom: 170%; }\n"
 
 /***/ }),
 
@@ -109,6 +109,7 @@ const app_component_1 = __webpack_require__(/*! @src/app.component */ "./src/app
 const http_1 = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 const talents_module_1 = __webpack_require__(/*! @src/talent-list/talents.module */ "./src/app/talent-list/talents.module.ts");
 const router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+const ngx_popper_1 = __webpack_require__(/*! ngx-popper */ "./node_modules/ngx-popper/fesm2015/ngx-popper.js");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -120,6 +121,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpClientModule,
             talents_module_1.TalentsModule,
+            ngx_popper_1.NgxPopperModule,
             router_1.RouterModule.forRoot([
                 { path: '', loadChildren: '@src/talent-list/talents.module#TalentsModule' }
             ])
@@ -217,7 +219,7 @@ exports.talentListBuilder = new TalentListBuilder();
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"talents-wrapper\">\r\n    <app-talent *ngFor=\"let talentKV of talents| keyvalue\" [talent]=\"talentKV.value\" [getTalentFunction]=\"getTalent\"\r\n        (eventTalentSelected)=\"closeAllTalents()\" [ngStyle]=\"talentKV.value.coordinate\">\r\n        test\r\n    </app-talent>\r\n    <div class=\"commander-icon\"></div>\r\n</div>\r\n<div class=\"viewport\">\r\n    <div class=\"btn-wrapper-reset\">\r\n        Total Points: {{totalPoints}} <button class=\"btn btn-red\" (click)=\"reset()\">Reset</button>\r\n    </div>\r\n    <div class=\"btn-wrapper-generate\">\r\n        <button class=\"btn btn-blue\" (click)=\"ngxSmartModalService.getModal('shareModal').open()\">Share</button>\r\n    </div>\r\n</div>\r\n<ngx-smart-modal #shareModal identifier=\"shareModal\">\r\n    <p>Share this URL to whom you want to share the app-talent tree.</p>\r\n    <div class=\"modal-input-wrapper\">\r\n        <input #inputTarget type=\"text\" [value]=\"shareableLink\"/>\r\n        <button class=\"btn btn-blue\" [ngxClipboard]=\"inputTarget\"><fa-icon icon=\"clipboard\"></fa-icon></button>\r\n    </div>\r\n\r\n    <button class=\"btn btn-red\" (click)=\"shareModal.close()\">Close</button>\r\n</ngx-smart-modal>"
+module.exports = "<div class=\"talents-wrapper\">\r\n    <app-talent \r\n        *ngFor=\"let talentKV of talents| keyvalue\" \r\n        [talent]=\"talentKV.value\" \r\n        [getTalentFunction]=\"getTalent\"\r\n        [ngStyle]=\"talentKV.value.coordinate\">\r\n    </app-talent>\r\n    <div class=\"commander-icon\"></div>\r\n</div>\r\n<div class=\"btn-wrapper-reset\">\r\n    Total Points: {{totalPoints}} <button class=\"btn btn-red\" (click)=\"reset()\">Reset</button>\r\n</div>\r\n<div class=\"btn-wrapper-generate\">\r\n    <button class=\"btn btn-blue\" (click)=\"ngxSmartModalService.getModal('shareModal').open()\">Share</button>\r\n</div>\r\n<ngx-smart-modal #shareModal identifier=\"shareModal\">\r\n    <p>Share this URL to whom you want to share the app-talent tree.</p>\r\n    <div class=\"modal-input-wrapper\">\r\n        <input #inputTarget type=\"text\" [value]=\"shareableLink\"/>\r\n        <button class=\"btn btn-blue\" [ngxClipboard]=\"inputTarget\"><fa-icon icon=\"clipboard\"></fa-icon></button>\r\n    </div>\r\n\r\n    <button class=\"btn btn-red\" (click)=\"shareModal.close()\">Close</button>\r\n</ngx-smart-modal>"
 
 /***/ }),
 
@@ -228,7 +230,7 @@ module.exports = "<div class=\"talents-wrapper\">\r\n    <app-talent *ngFor=\"le
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  background: url('img_TalentBG1.png') no-repeat;\n  display: block;\n  width: 868px; }\n\n.talents-wrapper {\n  display: inline-block;\n  position: relative;\n  width: 580px;\n  height: 580px;\n  margin: 0 0 0 80px; }\n\n.btn-wrapper-reset {\n  display: flex;\n  align-items: center;\n  color: white;\n  background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAuCAYAAADgKBFVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAjnSURBVHhe7Zx3qGRFFsZndc05Z9ecXQMGFPMurjlgzgrumhOisisqmBOmFZRVMCdMiCjmiDkrJlxz1v13//f7DfUNx9PVc7unZ16/fnMP/Kh+76aqOt89Vbdu1Z00DuwPfTKoTe/zzdLArAFsel9/5C1XSBPRqGD/L253ZZPOXsBI2WeuwDyJ+cTiJZ1DLJhYVswt/igwjllZrCM2FjuIeQvLiL+J1cUCgvwsVP5eUSwhyAPnIm+klAnjN9vmLKwg5hcu24QxO65XfGdhOGkxQWWRRkdRUQuLdQUVjjPYBwdQ+VsWVi2wH6whNhV/EghhrcJqYmmxkuD8FgB5QQSLFtjXeUQEvjb5AUTlPIAFQIoISOM5LYCdBCKwmDkXvxHj8iXFqJMaiNS/NxD7lHToVnPy1HDlAhUH/J+KhdkEFeYUJ+B4cAUDTgAfR4X7d8TX6EbMTw073vRSnvjbZiHk8+H4DQUigPXFLiU9Whwo/iouFDeKf4pHCj0LIGa4F7MaoxG+aoajItnsMJMd1GSuyFyh02pN+Y0OhVh3kLdTBqJNLpdBtBFHGkOTBJSNdKnAemLNwtbidHFogSarp/rIBcg2tQpBCDjeEEJxYjQfRyVsL1AtiiWDpJsFCNHsFyusyaLzeypwxWirzXIJNxF2CKE24qbF/DnxF3GUyOUyNQFwvdsKN4uLBXc9/COAABw5TN/1EZ1POKW9JNOkWHQ+F9xK7F84R1yTuF6cEjihcK34RnyV+LrwYeHBwmWFi8S/xOFiL7FvYUexhdgoYTEhNqDSDggcIo4tKZxRuEE8LB7vAs44V9xVeLXwfuKDLsRyUW9wqjhC7C0sIJxP+d4R34ufAu+KLwPUN3d+ZJtEo9n5qP8C8XrhCoEIcPpp4ibxpHhL/Bj4oQGcHukmAPNrIh//SYJKiVhI5rNErED4NvFzAidE8vboIMjbc3kyHyVwvJ0P+fw5/28nXkh0WLzjAePu5u6igu3Y1wSdijcFjnIGak4eJlGMUNtnZsI30hcCwXdYTQC0TQiAkJYrdDw6PZLzW9tnZqbDsgDcviOCmgBqJx1PjFp+x5oO6yYAOlqxCRiVCh21/I41vzMcHo2OH4MFDKL8W7QVOPGYbPGOj8YjHY8mu4pWABOT3znfAvCgBwJ4I9AKYOIxxfGMCq0tPAhxp3hOuO00tZO0jC5TjFGxB0QeiPHzvYmDHtAKZLSZbDziIQCGZI8TjMGTMsT5SoIBoFYAE4cOi68aedkRX2QAQ79XCwshC4DhzdqFWsYnHRYFADVbRCCEncVJ4rrAo6J2oZbxSaPFJwTgHTYDQ06ZSMHECl5T8uRwlYh9hhwh/pfI22uZbJlxNFpNAAYB+D0175qZhEBEQAQ8RcDTIjr4PfFsSVsBDJ9G6yYAnM+EDyIAAvCkD48hIAQ4WTCG8KlADCeKbcUl4nbBQBPbWgEMh0brJgCcHyOAowDOp7PoCHC5+I9ABKQHCxxPBEAMTFK4RbQCGA6NRkcQ5zKVi5QBI94PMI0JcCIwXAzMinlM+DGRu/tjwTvo/wreKJLCM+LvohXA8Gg0HO/JhkwpRgBMo2IKF+EbR+I4O9WON7WLAsfeIRAAM1RbAQyHrhY7eb77iQaeTGghWACmVwFwHNGAu585ca0AhkPV3M6DmwCPC+B4Rg4dBaZVACYeC7V9WmYcXc2rSIgC9NqB+eW8IaRj58mf+YTZoZm8f8tw6TBm+vJOgOFe4HHtfvFSoWnWb9xWI+/fMlw6jPn0ONnkacxNDs3bM3n/luHSYYR9ogAgBnrpRAFwBOD53pGAk3wnmGJMZ46XRBGOIbWgmNvO/h4qzhlqGVs6LA/80AcAhMGKGsYAgMe4/wsWX7A0idUq2wkmlURYVQubFxAVCxTvKTxRYH1BjhY1aoUYJXJ5uBki/XaiB6XDpiYAJoceJFghZFgcYueT4nQPB0N0/m4CAbDcif4F6X6CJVyk5wuWVbECh4ji1ThetcNvZibXCjIKkH8GxsArkxgRjdPuuBFYQkY5EQADaFEgtfMOQodlAdgsAkcAL7leReB4IBrQYYxr0XA8j4tPFZ4vUHCgwI4CQGRxcwKMItKMcAzpy4IlXhZCrJgZUUHTE2ZYudwvFqLzLQBgWRcCQCRexYMYaucdhA7rJoBuxhgBIAQciKNwPNGB1UR8pMF3P3hxpiPBMYJ1hS44TudOITw6AiCCKBgGkKgURODoQOVyLAJhH/6uFbhfuA7UtvWCy+C/Hfr9fwvYdzpOp1yACGIEGBMBNJmFEQeKgOiAU5kkwtwAwjq/+doGX93gaxv8pqnwkmpWG/NSif35+gUwzsB0NFYRc8fHhY6Q5xN47qLxndStDbUDTN6eceUbn9d8nnBn1zCxFscZO964M0xUI/1FxNXEMa8sCuVVeiSfj+MjuTzxfDBNhgBwHjODLAATDecyaggIBCFw9/PJFEAE7MMnV5z6yx2AGFia7TEJQBiGt4pEgyiA7KCmCsjbM00CINIdKWjeLACWkp8lGDzjG0E0gTifdx5XCp6sgN/3JS4tuEn0amBzrzgvwHWHJgB/i6dXYxg5ioVz0HxYAEQCO98Wh6UhfuwAmMBqeNXM/AOEYXjh5G8J8PshQdtLSvvKIy1L3UlzZUEWQL7DOQ4RkAKOP0zwcQj6TQidjjBCII1lw/xexV/6cJPK5142EbE/BXsGmG9xprg14HJ7ObibSOO+lRlziwKAJmsSAKIBmzunhqYnwockcD5PHAiBL2lYAHEdPnMbzxbcjXeXlI9euBNs4oRZBO2nJtNkFoCxAEyuLzfBhigc4UYCPoaxh+CdTQQhRkbOcgUwI4mKtyBobnj8dIXR9PA/Hl93F0xKoaNKyhc4jg/wKOrOKl/w4lhmOSEwUhySBZnzk+nXaucYhJzfzMhZrZCReLcA/7MIwKOcSwos799ErsB8/Uy/VjvHIOT8ZkbOcgGbrGm/mpMz8Xq5AuO2Gv1a7RyDkPObGTnLBezV+t3flo/JFejzdqNfq51jEHJ+M6211tpMapMm/QZXHrsu+Z+u7wAAAABJRU5ErkJggg==\");\n  background-repeat: no-repeat;\n  background-size: contain;\n  padding: 6px 0;\n  text-align: center;\n  position: fixed;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  top: 0;\n  right: 0; }\n\n.btn-wrapper-reset button {\n    float: right;\n    margin: 0 1em; }\n\n.btn-wrapper-generate {\n  padding: 6px 10px;\n  text-align: center;\n  position: fixed;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  bottom: 0;\n  right: 0; }\n\n.commander-icon {\n  width: 36px;\n  height: 36px;\n  background: black;\n  position: absolute;\n  left: 280px;\n  top: 275px; }\n\nngx-smart-modal {\n  text-align: center; }\n\nngx-smart-modal .modal-input-wrapper {\n    display: flex;\n    margin: 1em 0; }\n\nngx-smart-modal .modal-input-wrapper input {\n      flex-grow: 1;\n      margin: 0;\n      border-radius: .5em 0 0 .5em; }\n\nngx-smart-modal .modal-input-wrapper button {\n      margin: 0;\n      border-radius: 0 .5em .5em 0;\n      padding: .1em 1em;\n      box-shadow: inset 0px -2px 5px #0590d3; }\n"
+module.exports = ":host {\n  background: url('img_TalentBG1.png') no-repeat;\n  display: block;\n  width: 868px; }\n\n.talents-wrapper {\n  display: inline-block;\n  position: relative;\n  width: 580px;\n  height: 580px;\n  margin: 0 0 0 80px; }\n\n.btn-wrapper-reset {\n  display: flex;\n  align-items: center;\n  color: white;\n  background-image: url(\"data:image/png;base64,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\");\n  background-repeat: no-repeat;\n  background-size: contain;\n  padding: 6px 0;\n  text-align: center;\n  position: fixed;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  top: 0;\n  right: 0; }\n\n.btn-wrapper-reset button {\n    float: right;\n    margin: 0 1em; }\n\n.btn-wrapper-generate {\n  padding: 6px 10px;\n  text-align: center;\n  position: fixed;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  bottom: 0;\n  right: 0; }\n\n.commander-icon {\n  width: 36px;\n  height: 36px;\n  background: black;\n  position: absolute;\n  left: 273px;\n  top: 268px; }\n\nngx-smart-modal {\n  text-align: center; }\n\nngx-smart-modal .modal-input-wrapper {\n    display: flex;\n    margin: 1em 0; }\n\nngx-smart-modal .modal-input-wrapper input {\n      flex-grow: 1;\n      margin: 0;\n      border-radius: .5em 0 0 .5em; }\n\nngx-smart-modal .modal-input-wrapper button {\n      margin: 0;\n      border-radius: 0 .5em .5em 0;\n      padding: .1em 1em;\n      box-shadow: inset 0px -2px 5px #0590d3; }\n"
 
 /***/ }),
 
@@ -282,12 +284,6 @@ let TalentListComponent = class TalentListComponent {
             talents = talent_list_builder_1.talentListBuilder.fromLevelString(query, talents);
         }
         return talents;
-    }
-    closeAllTalents() {
-        // Close all other talents
-        this.contentChildren
-            .filter(content => content.showDescription)
-            .forEach(content => content.showDescription = false);
     }
     reset() {
         this.contentChildren.forEach(child => child.reset());
@@ -394,7 +390,7 @@ exports.TalentSVGComponent = TalentSVGComponent;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"talent\" [attr.data-level]=\"talent.level\" [attr.data-unlocked]=\"resolvedDependencies()\" [popper]=\"tooltipContent\" [popperTrigger]=\"'click'\" [popperTarget]=\"popperTargetElement\">\r\n    <popper-content class=\"talent-description\"  #tooltipContent>\r\n        <div class=\"talent-description-header\">\r\n            <h3>{{talent.name}} </h3>\r\n            <span>{{talent.level}}/{{talent.totalLevel}}</span>\r\n        </div>\r\n        <div class=\"talent-description-details\">\r\n            <div *ngFor=\"let levelValues of talent.values\">\r\n                <h4>{{talent.type}}</h4>\r\n                <mat-tab-group [disableRipple]=\"true\" headerPosition=\"below\" [selectedIndex]=\"talent.level\">\r\n                    <mat-tab *ngFor=\"let value of levelValues; index as i\" label=\"{{i+1}}\">\r\n                        <p [innerHTML]=\"talent.description | format: value\"></p>\r\n                    </mat-tab>\r\n                </mat-tab-group>\r\n            </div>\r\n        </div>\r\n        <div class=\"talent-description-buttons\" *ngIf=\"resolvedDependencies()\">\r\n            <button [disabled]=\"!canUpgrade()\" class=\"btn btn-blue\" (click)=\"upgrade()\">Upgrade</button>\r\n            <button class=\"btn btn-red\" (click)=\"reset()\">Reset</button>\r\n        </div>\r\n        <div class=\"talent-dependencies\" *ngIf=\"!resolvedDependencies()\">\r\n            <p>Please upgrade <b [innerHTML]=\"talent.dependencies\"></b> to the maximum level first.</p>\r\n            <div>\r\n                <app-talent-svg *ngFor=\"let dependency of dependencies\" [image]=\"dependency.name\"></app-talent-svg>\r\n            </div>\r\n        </div>\r\n    </popper-content >\r\n    <div class=\"talent-image\" #popperTargetElement>\r\n        <app-talent-svg [image]=\"talent.name\" (click)=\"emitSelect()\"></app-talent-svg>\r\n        <div class=\"talent-line\" *ngFor=\"let line of talent.lines\" [ngStyle]=\"line\"></div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "\r\n<div class=\"talent\" \r\n        [attr.data-level]=\"talent.level\" \r\n        [attr.data-unlocked]=\"resolvedDependencies()\">\r\n    <div class=\"talent-image\"\r\n            [popper]=\"tooltipContent\" \r\n            popperTrigger=\"click\">\r\n        <app-talent-svg [image]=\"talent.name\"></app-talent-svg>\r\n        <div class=\"talent-line\" *ngFor=\"let line of talent.lines\" [ngStyle]=\"line\"></div>\r\n    </div>\r\n    <popper-content class=\"talent-description\"  #tooltipContent>\r\n        <div class=\"talent-description-header\">\r\n            <h3>{{talent.name}} </h3>\r\n            <span>{{talent.level}}/{{talent.totalLevel}}</span>\r\n        </div>\r\n        <div class=\"talent-description-details\">\r\n            <div *ngFor=\"let levelValues of talent.values\">\r\n                <h4>{{talent.type}}</h4>\r\n                <mat-tab-group \r\n                        [disableRipple]=\"true\" \r\n                        headerPosition=\"below\" \r\n                        [selectedIndex]=\"talent.level\">\r\n                    <mat-tab \r\n                            *ngFor=\"let value of levelValues; index as i\" \r\n                            label=\"{{i+1}}\">\r\n                        <p [innerHTML]=\"talent.description | format: value\"></p>\r\n                    </mat-tab>\r\n                </mat-tab-group>\r\n            </div>\r\n        </div>\r\n        <div class=\"talent-description-buttons\" *ngIf=\"resolvedDependencies()\">\r\n            <button [disabled]=\"!canUpgrade()\" class=\"btn btn-blue\" (click)=\"upgrade()\">Upgrade</button>\r\n            <button class=\"btn btn-red\" (click)=\"reset()\">Reset</button>\r\n        </div>\r\n        <div class=\"talent-dependencies\" *ngIf=\"!resolvedDependencies()\">\r\n            <p>Please upgrade <b [innerHTML]=\"talent.dependencies\"></b> to the maximum level first.</p>\r\n            <div>\r\n                <app-talent-svg *ngFor=\"let dependency of dependencies\" [image]=\"dependency.name\"></app-talent-svg>\r\n            </div>\r\n        </div>\r\n    </popper-content >\r\n</div>\r\n"
 
 /***/ }),
 
@@ -432,7 +428,6 @@ const core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular
 const talent_model_1 = __webpack_require__(/*! @src/talent-list/talent/talent.model */ "./src/app/talent-list/talent/talent.model.ts");
 let TalentComponent = class TalentComponent {
     constructor() {
-        this.eventTalentSelected = new core_1.EventEmitter();
         this.dependencies = [];
         this.dependencyNames = [];
     }
@@ -444,17 +439,6 @@ let TalentComponent = class TalentComponent {
                 this.dependencies[i] = talent;
             }
         });
-    }
-    emitSelect() {
-        // An indication of a talent selection change only happens when the show value is 'false'
-        // 'true' is only a nullable selection and is no change of selection
-        if (!this.showDescription) {
-            this.eventTalentSelected.emit();
-        }
-        this.select();
-    }
-    select() {
-        this.showDescription = !this.showDescription;
     }
     upgrade() {
         if (!this.canUpgrade()) {
@@ -487,10 +471,6 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Function)
 ], TalentComponent.prototype, "getTalentFunction", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], TalentComponent.prototype, "eventTalentSelected", void 0);
 TalentComponent = __decorate([
     core_1.Component({
         selector: 'app-talent',
