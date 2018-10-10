@@ -52,7 +52,7 @@ module.exports = "<header>\r\n    <h3>RoC Talent Creator <span>Beta</span></h3>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  height: 100%;\n  display: block;\n  overflow: auto;\n  zoom: 170%; }\n\nheader {\n  z-index: 1;\n  background: black;\n  opacity: .8;\n  color: white;\n  position: fixed;\n  width: 100%; }\n\nheader h3 {\n    margin: 0;\n    float: left; }\n\nheader h3 span {\n      font-size: 50%; }\n\nheader nav {\n    float: right;\n    font-size: 1.17em;\n    padding: 0 2em;\n    color: white; }\n\nheader nav a {\n      color: inherit;\n      padding: 0 1em; }\n"
+module.exports = ":host {\n  height: 100%;\n  display: block;\n  overflow: auto;\n  zoom: 170%; }\n\nheader {\n  z-index: 2;\n  background: black;\n  opacity: .8;\n  color: white;\n  position: fixed;\n  width: 100%; }\n\nheader h3 {\n    margin: 0;\n    float: left; }\n\nheader h3 span {\n      font-size: 50%; }\n\nheader nav {\n    float: right;\n    font-size: 1.17em;\n    padding: 0 2em;\n    color: white; }\n\nheader nav a {\n      color: inherit;\n      padding: 0 1em; }\n"
 
 /***/ }),
 
