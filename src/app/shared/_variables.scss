@@ -1,0 +1,38 @@
+// @media (max-width: 767px) {
+//     $font-buttons: 3vw;
+//     $font-general: 2vw;
+//     $talent-description-width: 50vw;
+// }
+
+// @media (min-width:1025px) {
+//     $font-buttons: 2vw;
+//     $font-general: 1vw;
+//     $talent-description-width: 20vw;
+// }
+
+@mixin font-button() {
+    @media (max-width: 767px) {
+        font-size: 3vw;
+    }
+    @media (min-width:1025px) {
+        font-size: 1vw;
+    }
+}
+
+@mixin font-general() {
+    @media (max-width: 767px) {
+        font-size: 2vw;
+    }
+    @media (min-width:1025px) {
+        font-size: .5vw;
+    }
+}
+
+@mixin talent-description-width() {
+    @media (max-width: 767px) {
+        width: 50vw;
+    }
+    @media (min-width:1025px) {
+        width: 20vw;
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TalentModel } from '@src/talent-list/talent/talent.model';
 
 @Component({
@@ -11,9 +11,6 @@ export class TalentComponent implements OnInit {
     @Input() talent: TalentModel;
     @Input() getTalentFunction: (talentIndex: string) => TalentModel;
 
-    @Output() eventTalentSelected = new EventEmitter();
-
-    showDescription: boolean;
     dependencies: Array<TalentModel> = [];
     dependencyNames: Array<string> = [];
 
@@ -27,21 +24,8 @@ export class TalentComponent implements OnInit {
         });
     }
 
-    emitSelect() {
-        // An indication of a talent selection change only happens when the show value is 'false'
-        // 'true' is only a nullable selection and is no change of selection
-        if (!this.showDescription) {
-            this.eventTalentSelected.emit();
-        }
-        this.select();
-    }
-
-    select() {
-        this.showDescription = !this.showDescription;
-    }
-
     upgrade() {
-        if (!this.canUpgrade()) {return; }
+        if (!this.canUpgrade()) { return; }
 
         this.talent.level += 1;
     }
@@ -49,12 +33,12 @@ export class TalentComponent implements OnInit {
     canUpgrade(): boolean {
         const newValue = this.talent.level + 1;
         return newValue <= this.talent.totalLevel
-                        && this.resolvedDependencies();
+            && this.resolvedDependencies();
     }
 
     resolvedDependencies(): boolean {
         const result = this.dependencies.filter(dep => dep.level !== dep.totalLevel).length === 0;
-        
+
         // When its dependencies have been reset, also reset the parent level
         if (!result) {
             this.reset();

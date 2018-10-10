@@ -13,15 +13,20 @@
 }
 
 .btn-wrapper-reset {
+    display: flex;
+    align-items: center;
     color: white;
     background-image: url('assets/images/img_TalentBG2.png');
     background-repeat: no-repeat;
+    background-size: contain;
     padding: 6px 0;
 
     text-align: center;
     
     position: fixed;
-    top: 0;
+    backface-visibility: hidden;
+
+    top: 2em;
     right: 0;
 
     button {
@@ -36,6 +41,8 @@
     text-align: center;
     
     position: fixed;
+    backface-visibility: hidden;
+
     bottom: 0;
     right: 0;
 }
@@ -46,18 +53,23 @@
     background: black;
 
     position: absolute;
-    left: 280px;
-    top: 275px;
+    left: 273px;
+    top: 268px;
 }
 
 ngx-smart-modal {
     text-align: center;
+
+    ::ng-deep .nsm-body {
+        margin-top: 2.5em;
+    }
 
     .modal-input-wrapper {
         display: flex;
         margin: 1em 0;
         
         input {
+            width: 100%;
             flex-grow: 1;
             margin: 0;
             border-radius: .5em 0 0 .5em;
@@ -65,9 +77,9 @@ ngx-smart-modal {
 
         button {
             margin: 0;
-            color: white;
             border-radius: 0 .5em .5em 0;
             padding: .1em 1em;
+            box-shadow: inset 0px -2px 5px #0590d3;
         }
     }
 }

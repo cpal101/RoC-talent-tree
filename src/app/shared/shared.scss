@@ -1,3 +1,4 @@
+@import "_variables.scss";
 
 @font-face {
     font-family: NotoSansHans;
@@ -6,7 +7,7 @@
 
 body {
     font-family: NotoSansHans;
-    font-size: 11pt;
+    @include font-general();
     height: 100%;
     padding: 0;
     margin: 0;
@@ -15,7 +16,9 @@ body {
 html {
     background: url('assets/images/img_commander_background_germany.jpg') no-repeat 0 0/100%;
     background-attachment: fixed;
+    background-size: cover;
     height: 100%;
+    touch-action: manipulation;
 }
 
 @mixin btn-color($color-dark, $color-primary, $color-highlight, $color-inset-shadow, $color-text) {
@@ -40,7 +43,7 @@ html {
     border: unset;
     border-radius: .2em;
     font-weight: 900;
-    font-size: 12pt;
+    @include font-button();
 
     border-width: 0 2px 3px 2px;
     border-style: solid;

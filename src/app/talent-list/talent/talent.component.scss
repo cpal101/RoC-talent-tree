@@ -1,8 +1,9 @@
+@import "../../shared/_variables.scss";
+
 :host {
     display: inline-block;
     position: absolute;
     margin: 1rem;
-    font-size: 9pt;
 
     width: 34px;
     height: 34px;
@@ -86,18 +87,13 @@
 }
 
 .talent-description {
-    width: 250px;
-    text-align: center;
 
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: .2em;
-    padding: 1em;
-    position: absolute;
-    left: 100%;
-    margin: 0 2vw;
-    bottom: 50%;
-    transform: translateY(50%);
-    z-index: 2;
+    ::ng-deep .ngxp__container {
+        @include talent-description-width();
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.8);
+        text-align: center;
+    }
 
     .talent-description-header {
         overflow: hidden;
@@ -109,6 +105,16 @@
         }
         span {
             float: right;
+        }
+    }
+
+    .talent-description-buttons {
+        display: flex;
+        justify-content: space-around;
+        padding: 1em;
+
+        button {
+            margin: 0;
         }
     }
 }
@@ -136,8 +142,9 @@
     }
 
     app-talent-svg {
-        user-select: none;
         z-index: 1;
+
+        user-select: none;
         position: relative;
     }
 
@@ -151,7 +158,6 @@
         border-style: solid;
     }
 }
-
 
 .talent ::ng-deep {
 
@@ -173,8 +179,10 @@
         flex-grow: 1;
         height: auto;
         width: auto;
-        padding: 0 10px;
+        padding: 0;
+        margin: 0 1%;
         user-select: none;
+        @include font-button();
     }
 
     .mat-tab-label-content {
@@ -186,6 +194,7 @@
         width: 100%;
         border-radius: 1em;
         color: white;
+        padding: 0 0.5em;
     }
 
     .mat-tab-label-active {

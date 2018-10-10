@@ -1,7 +1,9 @@
 <div class="talents-wrapper">
-    <app-talent *ngFor="let talentKV of talents| keyvalue" [talent]="talentKV.value" [getTalentFunction]="getTalent"
-        (eventTalentSelected)="closeAllTalents()" [ngStyle]="talentKV.value.coordinate">
-        test
+    <app-talent 
+        *ngFor="let talentKV of talents| keyvalue" 
+        [talent]="talentKV.value" 
+        [getTalentFunction]="getTalent"
+        [ngStyle]="talentKV.value.coordinate">
     </app-talent>
     <div class="commander-icon"></div>
 </div>

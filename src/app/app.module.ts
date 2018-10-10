@@ -5,6 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { TalentsModule } from '@src/talent-list/talents.module';
 import { RouterModule } from '@angular/router';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBug, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faBug, faCodeBranch);
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,6 +19,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     HttpClientModule,
     TalentsModule,
+    FontAwesomeModule,
     RouterModule.forRoot(
       [
         { path: '', loadChildren: '@src/talent-list/talents.module#TalentsModule' }

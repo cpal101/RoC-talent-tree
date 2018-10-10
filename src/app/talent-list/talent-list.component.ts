@@ -43,13 +43,6 @@ export class TalentListComponent {
     return talents;
   }
 
-  closeAllTalents() {
-    // Close all other talents
-    this.contentChildren
-      .filter(content => content.showDescription)
-      .forEach(content => content.showDescription = false);
-  }
-
   // Use arrow function so the context of 'this' is preserved
   getTalent = (talentIndex: string): TalentModel => {
     return this.talents.get(talentIndex);

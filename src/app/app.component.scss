@@ -1,4 +1,37 @@
 :host {
     height: 100%;
     display: block;
+    overflow: auto;
+    zoom: 170%;
+}
+
+header {
+    z-index: 1;
+
+    background: black;
+    opacity: .8;
+    color: white;
+    position: fixed;
+    width: 100%;
+
+    h3 {
+        margin: 0;
+        float: left;
+
+        span {
+            font-size: 50%;
+        }
+    }
+
+    nav {
+        float: right;
+        font-size: 1.17em;
+        padding: 0 2em;
+        color: white;
+
+        a {
+            color: inherit;
+            padding: 0 1em;
+        }
+    }
 }

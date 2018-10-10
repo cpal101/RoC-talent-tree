@@ -3,6 +3,7 @@ import { MatTabsModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
+import { NgxPopperModule } from 'ngx-popper';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faClipboard } from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +30,7 @@ library.add(faClipboard);
       NgxSmartModalModule.forChild(),
       ClipboardModule,
       FontAwesomeModule,
+      NgxPopperModule.forRoot({placement: 'right'}),
       RouterModule.forChild(
         [
           { path: '', component: TalentListComponent }
