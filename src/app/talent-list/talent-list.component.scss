@@ -13,6 +13,7 @@
 }
 
 .btn-wrapper-reset {
+    z-index: 2;
     display: flex;
     align-items: center;
     color: white;
@@ -20,12 +21,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     padding: 6px 0;
-
     text-align: center;
-    
     position: fixed;
     backface-visibility: hidden;
-
     top: 2em;
     right: 0;
 
@@ -36,13 +34,11 @@
 }
 
 .btn-wrapper-generate {
+    z-index: 2;
     padding: 6px 10px;
-
     text-align: center;
-    
     position: fixed;
     backface-visibility: hidden;
-
     bottom: 0;
     right: 0;
 }
