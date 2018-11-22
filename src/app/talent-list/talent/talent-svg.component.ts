@@ -1,16 +1,16 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-talent-svg',
-    templateUrl: 'talent-svg.component.html'
+  selector: 'app-talent-svg',
+  templateUrl: 'talent-svg.component.html'
 })
 export class TalentSVGComponent {
-    public imagePath = '';
+  public imagePath = '';
 
-    @Input()
-    set image(image: string) {
-        this.imagePath = `talent-list/talent/assets/images/${image}.png`;
-    }
+  @Input()
+  set image(image: string) {
+    this.imagePath = `talent-list/talent/assets/images/${image}.png`;
+  }
 
-    constructor() { }
+  constructor() {}
 }

@@ -1,81 +1,81 @@
-:host  {
-    background: url('assets/images/img_TalentBG1.png') no-repeat;
-    display: block;
-    width: 868px;
+:host {
+  background: url('assets/images/img_TalentBG1.png') no-repeat;
+  display: inline-block;
+  width: 868px;
 }
 
 .talents-wrapper {
-    display: inline-block;
-    position: relative;
-    width: 580px;
-    height: 580px;
-    margin: 0 0 0 80px;
+  display: inline-block;
+  position: relative;
+  width: 580px;
+  height: 580px;
+  margin: 0 0 0 80px;
 }
 
 .btn-wrapper-reset {
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    color: white;
-    background-image: url('assets/images/img_TalentBG2.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 6px 0;
-    text-align: center;
-    position: fixed;
-    backface-visibility: hidden;
-    top: 2em;
-    right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-image: url('assets/images/img_TalentBG2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 6px 0;
+  text-align: center;
+  position: fixed;
+  backface-visibility: hidden;
+  top: 2em;
+  right: 0;
 
-    button {
-        float: right;
-        margin: 0 1em;
-    }
+  button {
+    float: right;
+    margin: 0 1em;
+  }
 }
 
 .btn-wrapper-generate {
-    z-index: 2;
-    padding: 6px 10px;
-    text-align: center;
-    position: fixed;
-    backface-visibility: hidden;
-    bottom: 0;
-    right: 0;
+  z-index: 2;
+  padding: 6px 10px;
+  text-align: center;
+  position: fixed;
+  backface-visibility: hidden;
+  bottom: 0;
+  right: 0;
 }
 
 .commander-icon {
-    width: 36px;
-    height: 36px;
-    background: black;
+  width: 36px;
+  height: 36px;
+  background: black;
 
-    position: absolute;
-    left: 273px;
-    top: 268px;
+  position: absolute;
+  left: 273px;
+  top: 268px;
 }
 
 ngx-smart-modal {
-    text-align: center;
+  text-align: center;
 
-    ::ng-deep .nsm-body {
-        margin-top: 2.5em;
+  ::ng-deep .nsm-body {
+    margin-top: 2.5em;
+  }
+
+  .modal-input-wrapper {
+    display: flex;
+    margin: 1em 0;
+
+    input {
+      width: 100%;
+      flex-grow: 1;
+      margin: 0;
+      border-radius: 0.5em 0 0 0.5em;
     }
 
-    .modal-input-wrapper {
-        display: flex;
-        margin: 1em 0;
-        
-        input {
-            width: 100%;
-            flex-grow: 1;
-            margin: 0;
-            border-radius: .5em 0 0 .5em;
-        }
-
-        button {
-            margin: 0;
-            border-radius: 0 .5em .5em 0;
-            padding: .1em 1em;
-            box-shadow: inset 0px -2px 5px #0590d3;
-        }
+    button {
+      margin: 0;
+      border-radius: 0 0.5em 0.5em 0;
+      padding: 0.1em 1em;
+      box-shadow: inset 0px -2px 5px #0590d3;
     }
+  }
 }

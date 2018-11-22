@@ -1,42 +1,32 @@
-
-<div class="talent" 
-        [attr.data-level]="talent.level" 
-        [attr.data-unlocked]="resolvedDependencies()">
-    <div class="talent-image"
-            [popper]="tooltipContent" 
-            popperTrigger="click">
-        <app-talent-svg [image]="talent.name"></app-talent-svg>
-        <div class="talent-line" *ngFor="let line of talent.lines" [ngStyle]="line"></div>
+<div class="talent" [attr.data-level]="talent.level" [attr.data-unlocked]="resolvedDependencies()">
+  <div [class]="talent.size" [popper]="tooltipContent" popperTrigger="click">
+    <app-talent-svg [image]="talent.imageName"></app-talent-svg>
+    <div class="talent-line" *ngFor="let line of talent.lines" [ngStyle]="line"></div>
+  </div>
+  <popper-content class="talent-description" #tooltipContent>
+    <div class="talent-description-header">
+      <h3>{{ talent.title }}</h3>
+      <span>{{ talent.level }}/{{ talent.totalLevel }}</span>
     </div>
-    <popper-content class="talent-description"  #tooltipContent>
-        <div class="talent-description-header">
-            <h3>{{talent.name}} </h3>
-            <span>{{talent.level}}/{{talent.totalLevel}}</span>
-        </div>
-        <div class="talent-description-details">
-            <div *ngFor="let levelValues of talent.values">
-                <h4>{{talent.type}}</h4>
-                <mat-tab-group 
-                        [disableRipple]="true" 
-                        headerPosition="below" 
-                        [selectedIndex]="talent.level">
-                    <mat-tab 
-                            *ngFor="let value of levelValues; index as i" 
-                            label="{{i+1}}">
-                        <p [innerHTML]="talent.description | format: value"></p>
-                    </mat-tab>
-                </mat-tab-group>
-            </div>
-        </div>
-        <div class="talent-description-buttons" *ngIf="resolvedDependencies()">
-            <button [disabled]="!canUpgrade()" class="btn btn-blue" (click)="upgrade()">Upgrade</button>
-            <button class="btn btn-red" (click)="reset()">Reset</button>
-        </div>
-        <div class="talent-dependencies" *ngIf="!resolvedDependencies()">
-            <p>Please upgrade <b [innerHTML]="talent.dependencies"></b> to the maximum level first.</p>
-            <div>
-                <app-talent-svg *ngFor="let dependency of dependencies" [image]="dependency.name"></app-talent-svg>
-            </div>
-        </div>
-    </popper-content >
+    <div class="talent-description-details">
+      <div *ngFor="let levelValues of talent.values">
+        <h4>{{ talent.type }}</h4>
+        <mat-tab-group [disableRipple]="true" headerPosition="below" [selectedIndex]="talent.level">
+          <mat-tab *ngFor="let value of levelValues; index as i" label="{{i+1}}">
+            <p [innerHTML]="talent.description | format: value"></p>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <div class="talent-description-buttons" *ngIf="resolvedDependencies()">
+      <button [disabled]="!canUpgrade()" class="btn btn-blue" (click)="upgrade()">Upgrade</button>
+      <button class="btn btn-red" (click)="reset()">Reset</button>
+    </div>
+    <div class="talent-dependencies" *ngIf="!resolvedDependencies()">
+      <p>Please upgrade <b [innerHTML]="talent.dependencies"></b> to the maximum level first.</p>
+      <div>
+        <app-talent-svg *ngFor="let dependency of dependencies" [image]="dependency.imageName"></app-talent-svg>
+      </div>
+    </div>
+  </popper-content>
 </div>

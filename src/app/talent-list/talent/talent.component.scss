@@ -1,205 +1,211 @@
-@import "../../shared/_variables.scss";
+@import '../../shared/_variables.scss';
 
 :host {
-    display: inline-block;
-    position: absolute;
-    margin: 1rem;
+  display: inline-block;
+  position: absolute;
+  margin: 1rem;
 
+  .small-talent {
+    width: 17px;
+    height: 17px;
+  }
+
+  .talent,
+  .talent-image {
+    display: block;
+    width: 100%;
+    height: 100%;
     width: 34px;
     height: 34px;
-    
-    .talent, .talent-image {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .talent-image {
-        /* Make sure the inline-elements do not expect any fonts, so no 'reserving' height will be created */
-        line-height: 0;
-    }
+  }
+  .talent-image {
+    /* Make sure the inline-elements do not expect any fonts, so no 'reserving' height will be created */
+    line-height: 0;
+  }
+  .talent-image-small {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .talent-image:active app-talent-svg {
-    filter: saturate(.5);
-    transform: scale(.9);
+  filter: saturate(0.5);
+  transform: scale(0.9);
 }
 
 .talent[data-level='1'] ::ng-deep svg .SelectionOne {
-    fill:white;
+  fill: white;
 }
 .talent[data-level='2'] ::ng-deep svg {
-    .SelectionOne, 
-    .SelectionTwo {
-        fill:white;
-    }
+  .SelectionOne,
+  .SelectionTwo {
+    fill: white;
+  }
 }
 .talent[data-level='3'] ::ng-deep svg {
-    .SelectionOne, 
-    .SelectionTwo,
-    .SelectionThree {
-        fill:white;
-    }
+  .SelectionOne,
+  .SelectionTwo,
+  .SelectionThree {
+    fill: white;
+  }
 }
 .talent[data-level='4'] ::ng-deep svg {
-    .SelectionOne, 
-    .SelectionTwo,
-    .SelectionThree,
-    .SelectionFour {
-        fill:white;
-    }
+  .SelectionOne,
+  .SelectionTwo,
+  .SelectionThree,
+  .SelectionFour {
+    fill: white;
+  }
 }
 .talent[data-level='5'] ::ng-deep svg {
-    .SelectionOne, 
-    .SelectionTwo,
-    .SelectionThree,
-    .SelectionFour,
-    .SelectionFive {
-        fill:white;
-    }
+  .SelectionOne,
+  .SelectionTwo,
+  .SelectionThree,
+  .SelectionFour,
+  .SelectionFive {
+    fill: white;
+  }
 }
 
-.talent[data-unlocked="false"] {
-    .talent-image {
-        opacity: .5;
-    }
+.talent[data-unlocked='false'] {
+  .talent-image {
+    opacity: 0.5;
+  }
 
-    .talent-line {
-        height: 0;
-    }
+  .talent-line {
+    height: 0;
+  }
 }
 
 .talent-dependencies {
+  & > div {
+    display: inline-block;
+  }
 
-    & > div {
-        display: inline-block;
-    }
+  b {
+    color: #d8483a;
+  }
 
-    b {
-        color: #d8483a;
-    }
-    
-    app-talent-svg {
-        width: 65px;
-        display: inline-block;
-        filter: saturate(0);
-        pointer-events: none;
-    }
+  app-talent-svg {
+    width: 65px;
+    display: inline-block;
+    filter: saturate(0);
+    pointer-events: none;
+  }
 }
 
 .talent-description {
+  ::ng-deep .ngxp__container {
+    @include talent-description-width();
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
 
-    ::ng-deep .ngxp__container {
-        @include talent-description-width();
-        z-index: 3;
-        background: rgba(255, 255, 255, 0.8);
-        text-align: center;
+  .talent-description-header {
+    overflow: hidden;
+    padding: 0.5em 0;
+
+    h3 {
+      float: left;
+      margin: 0;
     }
-
-    .talent-description-header {
-        overflow: hidden;
-        padding: .5em 0;
-
-        h3 {
-            float: left;
-            margin: 0;
-        }
-        span {
-            float: right;
-        }
-    }
-
-    .talent-description-buttons {
-        display: flex;
-        justify-content: space-around;
-        padding: 1em;
-
-        button {
-            margin: 0;
-        }
-    }
-}
-
-.talent-description-details{
-    background: rgba(175, 208, 133, 0.6);
-    padding: .5em;
-    border-radius: .5em;
-    text-align: left;
-
     span {
-        float: right;
+      float: right;
     }
+  }
+
+  .talent-description-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+
+    button {
+      margin: 0;
+    }
+  }
 }
 
-.talent[data-level='0'] app-talent-svg {
-    filter: saturate(0);
+.talent-description-details {
+  background: rgba(175, 208, 133, 0.6);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  text-align: left;
+
+  span {
+    float: right;
+  }
+}
+
+.talent[data-unlocked='false'] app-talent-svg {
+  filter: saturate(0);
 }
 
 .talent-image {
-    // transform: scale(0.5);
+  // transform: scale(0.5);
 
-    &:hover app-talent-svg {
-        cursor: pointer;
-    }
+  &:hover app-talent-svg {
+    cursor: pointer;
+  }
 
-    app-talent-svg {
-        z-index: 1;
+  app-talent-svg {
+    z-index: 1;
 
-        user-select: none;
-        position: relative;
-    }
+    user-select: none;
+    position: relative;
+  }
 
-    .talent-line {
-        position: absolute;
-      
-        height: 3px;
-        background: white;
-        border-color: black;
-        border-width: 1px 0 1px 0;
-        border-style: solid;
-    }
+  .talent-line {
+    position: absolute;
+
+    height: 3px;
+    background: white;
+    border-color: black;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+  }
 }
 
 .talent ::ng-deep {
+  h3 {
+    margin: 0.5em 0;
+  }
+  h4 {
+    margin: 0;
+  }
 
-    h3 {
-        margin: .5em 0;
-    }
-    h4 {
-        margin: 0;
-    }
+  .mat-tab-list {
+    width: 100%;
+  }
+  .mat-tab-labels {
+    padding: 10px 0;
+  }
+  .mat-tab-label {
+    min-width: auto;
+    flex-grow: 1;
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin: 0 1%;
+    user-select: none;
+    @include font-button();
+  }
 
-    .mat-tab-list { 
-        width: 100%; 
-    }
-    .mat-tab-labels {
-        padding: 10px 0;
-    }
-    .mat-tab-label {
-        min-width: auto;
-        flex-grow: 1;
-        height: auto;
-        width: auto;
-        padding: 0;
-        margin: 0 1%;
-        user-select: none;
-        @include font-button();
-    }
+  .mat-tab-label-content {
+    display: block;
+    justify-content: unset;
+    align-items: unset;
+    background: grey;
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    color: white;
+    padding: 0 0.5em;
+  }
 
+  .mat-tab-label-active {
     .mat-tab-label-content {
-        display: block;
-        justify-content: unset;
-        align-items: unset;
-        background: grey;
-        height: 100%;
-        width: 100%;
-        border-radius: 1em;
-        color: white;
-        padding: 0 0.5em;
+      background: #11c1fb;
     }
-
-    .mat-tab-label-active {
-        .mat-tab-label-content {
-            background: #11c1fb;
-        }
-    }
+  }
 }
