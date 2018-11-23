@@ -1,11 +1,20 @@
-<div class="talents-wrapper">
-    <app-talent 
-        *ngFor="let talentKV of talents| keyvalue" 
-        [talent]="talentKV.value" 
-        [getTalentFunction]="getTalent"
-        [ngStyle]="talentKV.value.coordinate">
-    </app-talent>
-    <div class="commander-icon"></div>
+<div style="position: fixed; left:0; top:2em;color:red;z-index: 5;">
+    Debug: {{debug}} <br />
+    Scale: <span [innerHTML]="scale"></span> <br />
+    Origin: <span>{{origin.x}} {{origin.y}}</span>
+</div>
+<div class="talent-background" 
+    (pinchmove)="onPinch($event)" (pinch)="onPinch($event)" (pinchend)="onFinished($event)" (pinchstart)="onStart($event)"
+    [style.transform]="'translate3d(' + pan.x + 'px, ' + pan.x + 'px, 0px) scale(' + scale + ')' | safe">
+    <div class="talents-wrapper">
+        <app-talent 
+            *ngFor="let talentKV of talents| keyvalue" 
+            [talent]="talentKV.value" 
+            [getTalentFunction]="getTalent"
+            [ngStyle]="talentKV.value.coordinate">
+        </app-talent>
+        <div class="commander-icon"></div>
+    </div>
 </div>
 <div class="btn-wrapper-reset">
     Total Points: {{totalPoints}} <button class="btn btn-red" (click)="reset()">Reset</button>

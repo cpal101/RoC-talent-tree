@@ -14,6 +14,7 @@ import { TalentListComponent } from '@src/talent-list/talent-list.component';
 import { TalentComponent } from '@src/talent-list/talent/talent.component';
 import { TalentSVGComponent } from '@src/talent-list/talent/talent-svg.component';
 import { FormatPipe } from '@src/shared/format.pipe';
+import { SafePipe } from '@src/shared/safe.pipe';
 
 library.add(faClipboard);
 
@@ -22,7 +23,8 @@ library.add(faClipboard);
       TalentComponent,
       TalentListComponent,
       TalentSVGComponent,
-      FormatPipe
+      FormatPipe,
+      SafePipe
     ],
     imports: [
       MatTabsModule,

@@ -8,9 +8,12 @@
 body {
     font-family: NotoSansHans;
     @include font-general();
-    height: 100%;
+    // height: 100%;
     padding: 0;
     margin: 0;
+    overflow: auto;
+
+    -webkit-overflow-scrolling: touch;
 }
 
 html {
@@ -18,7 +21,6 @@ html {
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
-    touch-action: manipulation;
 }
 
 @mixin btn-color($color-dark, $color-primary, $color-highlight, $color-inset-shadow, $color-text) {

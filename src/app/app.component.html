@@ -7,4 +7,6 @@
 </header>
 <div style="margin-block-start: 1em;margin-block-end: 1em;"></div>
 <!-- <app-talent-list></app-talent-list> -->
-<router-outlet></router-outlet>
+<div class="input-touch" (pinchmove)="onPinch($event)" (pinch)="onPinch($event)" (pan)="onPan($event)">
+    <router-outlet></router-outlet>
+</div>

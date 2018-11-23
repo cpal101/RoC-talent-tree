@@ -4,7 +4,6 @@
     "module": "commonjs",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-
     "baseUrl": "./",
     "outDir": "./dist",
     "sourceMap": true,
@@ -16,6 +15,9 @@
     "typeRoots": [
       "node_modules/@types",
       "./custom.d.ts"
+    ],
+    "types": [
+      "hammerjs"
     ],
     "lib": [
       "es2017",

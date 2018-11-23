@@ -1,7 +1,11 @@
-:host  {
+:host {
+}
+
+.talent-background {
     background: url('assets/images/img_TalentBG1.png') no-repeat;
     display: block;
     width: 868px;
+    transform-origin: top left;
 }
 
 .talents-wrapper {

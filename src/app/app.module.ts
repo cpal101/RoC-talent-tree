@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from '@src/app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,7 +26,7 @@ library.add(faBug, faCodeBranch);
       ]
     )
   ],
-  providers: [],
+  providers: [ { provide: 'Window', useValue: window }  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
