@@ -5,30 +5,38 @@
   position: absolute;
   margin: 1rem;
 
-  .small-talent {
-    width: 17px;
-    height: 17px;
-  }
-
   .talent,
   .talent-image {
     display: block;
     width: 100%;
     height: 100%;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
   .talent-image {
     /* Make sure the inline-elements do not expect any fonts, so no 'reserving' height will be created */
     line-height: 0;
   }
+
   .talent-image-small {
+    display: block;
+    width: 100%;
+    height: 100%;
     width: 20px;
     height: 20px;
+  }
+  .talent-image-small {
+    /* Make sure the inline-elements do not expect any fonts, so no 'reserving' height will be created */
+    line-height: 0;
   }
 }
 
 .talent-image:active app-talent-svg {
+  filter: saturate(0.5);
+  transform: scale(0.9);
+}
+
+.talent-image-small:active app-talent-svg {
   filter: saturate(0.5);
   transform: scale(0.9);
 }
@@ -69,6 +77,9 @@
 
 .talent[data-unlocked='false'] {
   .talent-image {
+    opacity: 0.5;
+  }
+  .talent-image-small {
     opacity: 0.5;
   }
 
@@ -165,6 +176,33 @@
     border-style: solid;
   }
 }
+
+.talent-image-small {
+  // transform: scale(0.5);
+
+  &:hover app-talent-svg {
+    cursor: pointer;
+  }
+
+  app-talent-svg {
+    z-index: 1;
+
+    user-select: none;
+    position: relative;
+  }
+
+  .talent-line {
+    position: absolute;
+
+    height: 3px;
+    background: white;
+    border-color: black;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+  }
+}
+
+
 
 .talent ::ng-deep {
   h3 {
