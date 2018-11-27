@@ -1,0 +1,412 @@
+{
+    "name": "Main-Siege",
+    "title": "Attack (All Troops)",
+    "description": "Increases the attack of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "218px",
+      "top": "329px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "10px",
+        "width": "15px",
+        "transform": "rotate(319deg)"
+      }
+    ]
+  },
+  {
+    "name": "twoR-Siege",
+    "title": "Defense (All Troops)",
+    "description": "Increases the defense of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["Main-Siege"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[0.5,1,1.5]],
+    "coordinate": {
+      "left": "175px",
+      "top": "324px"
+    },
+    "lines": [
+      {
+        "top": "9px",
+        "left": "15px",
+        "width": "30px",
+        "transform": "rotate(12deg)"
+      }
+    ]
+  },
+  {
+    "name": "twoL-Siege",
+    "title": "Attack (All Troops)",
+    "description": "Increases the attack of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["Main-Siege"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[0.5,1,1.5]],
+    "coordinate": {
+      "left": "220px",
+      "top": "370px"
+    },
+    "lines": [
+      {
+        "top": "-10px",
+        "left": "-7px",
+        "width": "30px",
+        "transform": "rotate(270deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeLM-Siege",
+    "title": "Moment of Triumph",
+    "description": "While the army led by this commander is at more than 90% strength, increase all damage dealt by <b>{0}%</b>.",
+    "imageName": "yellowFoamyBeer",
+    "size": "talent-image",
+    "dependencies": ["twoL-Siege"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[3,6,9]],
+    "coordinate": {
+      "left": "170px",
+      "top": "385px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "24px",
+        "width": "30px",
+        "transform": "rotate(155deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeRM-Siege",
+    "title": "Marionette",
+    "description": "Reduce damage taken from watchtowers by <b>{0}%</b>.",
+    "imageName": "yellowVoodoo",
+    "size": "talent-image",
+    "dependencies": ["twoR-Siege"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[5,10,15]],
+    "coordinate": {
+      "left": "145px",
+      "top": "348px"
+    },
+    "lines": [
+      {
+        "top": "-4px",
+        "left": "17px",
+        "width": "20px",
+        "transform": "rotate(135deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeL-Siege",
+    "title": "Buckler Shield",
+    "description": "Reduce counterattack damage taken by <b>{0}%</b>.",
+    "imageName": "yellowWoodShield",
+    "size": "talent-image",
+    "dependencies": ["twoL-Siege"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[3,6,9]],
+    "coordinate": {
+      "left": "205px",
+      "top": "410px"
+    },
+    "lines": [
+      {
+        "top": "-10px",
+        "left": "6px",
+        "width": "30px",
+        "transform": "rotate(105deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeR-Siege",
+    "title": "Signal Flare",
+    "description": "Increases damage dealt to watchtowers by <b>{0}%</b>.",
+    "imageName": "yellowSplash",
+    "size": "talent-image",
+    "dependencies": ["twoR-Siege"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[5,10,15]],
+    "coordinate": {
+      "left": "130px",
+      "top": "308px"
+    },
+    "lines": [
+      {
+        "top": "15px",
+        "left": "26px",
+        "width": "26px",
+        "transform": "rotate(200deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourL-Siege",
+    "title": "Health (All Troops)",
+    "description": "Increases the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeL-Siege"],
+    "dependenciesTitles": ["Buckler Shield"],
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "230px",
+      "top": "450px"
+    },
+    "lines": [
+      {
+        "top": "-7px",
+        "left": "-10px",
+        "width": "22px",
+        "transform": "rotate(240deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourR-Siege",
+    "title": "Defense (All Troops)",
+    "description": "Increase the defense of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeR-Siege"],
+    "dependenciesTitles": ["Buckler Shield"],
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "115px",
+      "top": "278px"
+    },
+    "lines": [
+      {
+        "top": "24px",
+        "left": "6px",
+        "width": "22px",
+        "transform": "rotate(240deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveLM-Siege",
+    "title": "Attack (All Troops)",
+    "description": "Increase the attack of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeL-Siege", "threeLM-Siege"],
+    "dependenciesTitles": ["Buckler Shield", " Moment of Triumph"],
+    "values": [[0.5,1,1.5]],
+    "coordinate": {
+      "left": "155px",
+      "top": "435px"
+    },
+    "lines": [
+      {
+        "top": "-10px",
+        "left": "6px",
+        "width": "28px",
+        "transform": "rotate(300deg)"
+      },
+      {
+        "top": "0px",
+        "left": "9px",
+        "width": "45px",
+        "transform": "rotate(160deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveRM-Siege",
+    "title": "Health (All Troops)",
+    "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeR-Siege", "threeRM-Siege"],
+    "dependenciesTitles": ["Marionette", " Signal Flare"],
+    "values": [[0.5,1,1.5]],
+    "coordinate": {
+      "left": "110px",
+      "top": "360px"
+    },
+    "lines": [
+      {
+        "top": "-11px",
+        "left": "4px",
+        "width": "34px",
+        "transform": "rotate(300deg)"
+      },
+      {
+        "top": "6px",
+        "left": "10px",
+        "width": "30px",
+        "transform": "rotate(174deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveL-Siege",
+    "title": "Thoroughbreds",
+    "description": "When this commander launches a rally attack, increase march speed of the rallied army by <b>{0}%</b>.",
+    "imageName": "yellowHorse",
+    "size": "talent-image",
+    "dependencies": ["fourL-Siege"],
+    "dependenciesTitles": ["Health (All Troops)"],
+    "values": [[3,6,9]],
+    "coordinate": {
+      "left": "190px",
+      "top": "460px"
+    },
+    "lines": [
+      {
+        "top": "10px",
+        "left": "12px",
+        "width": "34px",
+        "transform": "rotate(154deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveR-Siege",
+    "title": "Well Provisioned",
+    "description": "Increase troop load by <b>{0}%</b>.",
+    "imageName": "yellowBarrel",
+    "size": "talent-image",
+    "dependencies": ["fourR-Siege"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[3,6,9]],
+    "coordinate": {
+      "left": "80px",
+      "top": "317px"
+    },
+    "lines": [
+      {
+        "top": "-11px",
+        "left": "14px",
+        "width": "34px",
+        "transform": "rotate(300deg)"
+      }
+    ]
+  },
+  {
+    "name": "sixR-Siege",
+    "title": "Defense (All Troops)",
+    "description": "Increase the defense of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fiveRM-Siege"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[0.5,1]],
+    "coordinate": {
+      "left": "80px",
+      "top": "385px"
+    },
+    "lines": [
+      {
+        "top": "-6px",
+        "left": "10px",
+        "width": "26px",
+        "transform": "rotate(320deg)"
+      }
+    ]
+  },
+  {
+    "name": "sixL-Siege",
+    "title": "March Speed (All Troops)",
+    "description": "Increase the march speed of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fiveLM-Siege"],
+    "dependenciesTitles": ["Health (All Troops)"],
+    "values": [[3,6]],
+    "coordinate": {
+      "left": "125px",
+      "top": "455px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "12px",
+        "width": "26px",
+        "transform": "rotate(325deg)"
+      }
+    ]
+  },
+  {
+    "name": "sevenR-Siege",
+    "title": "Entrenched",
+    "description": "Reduces damage taken from garrisons by <b>{0}%</b> when attacking other cities.",
+    "imageName": "yellowMiner",
+    "size": "talent-image",
+    "dependencies": ["sixR-Siege"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[2,4,6]],
+    "coordinate": {
+      "left": "35px",
+      "top": "408px"
+    },
+    "lines": [
+      {
+        "top": "-2px",
+        "left": "24px",
+        "width": "26px",
+        "transform": "rotate(325deg)"
+      }
+    ]
+  },
+  {
+    "name": "sevenL-Siege",
+    "title": "Meteor Shower",
+    "description": "Increases damage dealt to garrison by <b>{0}%</b> when attacking other cities.",
+    "imageName": "yellowCommet",
+    "size": "talent-image",
+    "dependencies": ["sixL-Siege"],
+    "dependenciesTitles": ["March Speed (All Troops)"],
+    "values": [[2,4,6]],
+    "coordinate": {
+      "left": "83px",
+      "top": "475px"
+    },
+    "lines": [
+      {
+        "top": "-2px",
+        "left": "24px",
+        "width": "26px",
+        "transform": "rotate(325deg)"
+      }
+    ]
+  },
+  {
+    "name": "eightC-Siege",
+    "title": "Tear of Blessing",
+    "description": "Decreases the number of units that die in battle by <b>{0}%</b> (these units will instead be severely wounded and sent to the hospital).",
+    "imageName": "yellowDrop",
+    "size": "talent-image",
+    "dependencies": ["sevenL-Siege", "sevenR-Siege"],
+    "dependenciesTitles": ["Meteor Shower", "Entrenched"],
+    "values": [[2,4,6]],
+    "coordinate": {
+      "left": "100px",
+      "top": "415px"
+    },
+    "lines": [
+      {
+        "top": "12px",
+        "left": "-38px",
+        "width": "42px",
+        "transform": "rotate(10deg)"
+      },
+      {
+        "top": "42px",
+        "left": "-15px",
+        "width": "42px",
+        "transform": "rotate(110deg)"
+      }
+    ]
+  }
