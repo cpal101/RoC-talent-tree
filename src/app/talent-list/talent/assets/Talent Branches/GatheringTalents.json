@@ -1,0 +1,465 @@
+[
+
+  {
+    "name": "Main-Gathering",
+    "title": "March Speed (All Troops)",
+    "description": "Increase the march speed of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "values": [[3]],
+    "coordinate": {
+      "left": "218px",
+      "top": "329px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "10px",
+        "width": "15px",
+        "transform": "rotate(319deg)"
+      }
+    ]
+  },
+  {
+    "name": "twoR-Gathering",
+    "title": "Defense (All Troops)",
+    "description": "Increases the defense of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["Main-Gathering"],
+    "dependenciesTitles": ["March Speed (All Troops)"],
+    "values": [[1,2]],
+    "coordinate": {
+      "left": "175px",
+      "top": "324px"
+    },
+    "lines": [
+      {
+        "top": "9px",
+        "left": "15px",
+        "width": "30px",
+        "transform": "rotate(12deg)"
+      }
+    ]
+  },
+  {
+    "name": "twoL-Gathering",
+    "title": "Attack (All Troops)",
+    "description": "Increases the attack of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["Main-Gathering"],
+    "dependenciesTitles": ["March Speed (All Troops)"],
+    "values": [[0.5,1]],
+    "coordinate": {
+      "left": "220px",
+      "top": "370px"
+    },
+    "lines": [
+      {
+        "top": "-10px",
+        "left": "-7px",
+        "width": "30px",
+        "transform": "rotate(270deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeLM-Gathering",
+    "title": "Gathering Mastery (Food)",
+    "description": "Increase food gathering speed by <b>{0}%</b>.",
+    "imageName": "yellowWheat",
+    "size": "talent-image",
+    "dependencies": ["twoL-Gathering"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[10,20,30]],
+    "coordinate": {
+      "left": "170px",
+      "top": "385px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "24px",
+        "width": "30px",
+        "transform": "rotate(155deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeRM-Gathering",
+    "title": "Gathering Mastery (Stone)",
+    "description": "Increase stone gathering speed by <b>{0}%</b>.",
+    "imageName": "yellowRune",
+    "size": "talent-image",
+    "dependencies": ["twoR-Gathering"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[10,20,30]],
+    "coordinate": {
+      "left": "145px",
+      "top": "348px"
+    },
+    "lines": [
+      {
+        "top": "-4px",
+        "left": "17px",
+        "width": "20px",
+        "transform": "rotate(135deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeL-Gathering",
+    "title": "Gathering Mastery (Wood)",
+    "description": "Increase Wood gathering speed by <b>{0}%</b>.",
+    "imageName": "yellowTree",
+    "size": "talent-image",
+    "dependencies": ["twoL-Gathering"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[10,20,30]],
+    "coordinate": {
+      "left": "194px",
+      "top": "420px"
+    },
+    "lines": [
+      {
+        "top": "-16px",
+        "left": "6px",
+        "width": "40px",
+        "transform": "rotate(115deg)"
+      }
+    ]
+  },
+  {
+    "name": "threeR-Gathering",
+    "title": "Gathering Mastery (Gold)",
+    "description": "Increase gold gathering speed by <b>{0}%</b>.",
+    "imageName": "yellowCoins",
+    "size": "talent-image",
+    "dependencies": ["twoR-Gathering"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[10,20,30]],
+    "coordinate": {
+      "left": "130px",
+      "top": "308px"
+    },
+    "lines": [
+      {
+        "top": "15px",
+        "left": "26px",
+        "width": "26px",
+        "transform": "rotate(200deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourL-Gathering",
+    "title": "Health (All Troops)",
+    "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeL-Gathering"],
+    "dependenciesTitles": ["Gathering Mastery (Wood)"],
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "166px",
+      "top": "446px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "14px",
+        "width": "18px",
+        "transform": "rotate(145deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourR-Gathering",
+    "title": "Health (All Troops)",
+    "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeR-Gathering"],
+    "dependenciesTitles": ["Gathering Mastery (Gold)"],
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "104px",
+      "top": "336px"
+    },
+    "lines": [
+      {
+        "top": "0px",
+        "left": "14px",
+        "width": "18px",
+        "transform": "rotate(145deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourLM-Gathering",
+    "title": "Modified Axle",
+    "description": "Increase march speed of siege units by <b>{0}%</b>.",
+    "imageName": "yellowGearWheel",
+    "size": "talent-image",
+    "dependencies": ["fourL-Gathering"],
+    "dependenciesTitles": ["Health (All Troops)"],
+    "values": [[10,20,30]],
+    "coordinate": {
+      "left": "136px",
+      "top": "420px"
+    },
+    "lines": [
+      {
+        "top": "26px",
+        "left": "22px",
+        "width": "14px",
+        "transform": "rotate(215deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourRM-Gathering",
+    "title": "Tourniquet",
+    "description": "When troops led by this commander are in battle, decrease the number of severely wounded units by <b>{0}%</b> (these units will instead be slightly wounded).",
+    "imageName": "yellowLeaf",
+    "size": "talent-image",
+    "dependencies": ["fourR-Gathering"],
+    "dependenciesTitles": ["Health (All Troops)"],
+    "values": [[2,4,6]],
+    "coordinate": {
+      "left": "104px",
+      "top": "362px"
+    },
+    "lines": [
+      {
+        "top": "-4px",
+        "left": "4px",
+        "width": "14px",
+        "transform": "rotate(80deg)"
+      }
+    ]
+  },
+  {
+    "name": "fourC-Gathering",
+    "title": "March Speed (All Troops)",
+    "description": "Increase the march speed of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["threeRM-Gathering","threeLM-Gathering"],
+    "dependenciesTitles": ["Gathering Mastery (Stone)", "Gathering Mastery (Food)"],
+    "values": [[3,6]],
+    "coordinate": {
+      "left": "134px",
+      "top": "390px"
+    },
+    "lines": [
+      {
+        "top": "6px",
+        "left": "16px",
+        "width": "22px",
+        "transform": "rotate(175deg)"
+      },
+      {
+        "top": "-4px",
+        "left": "6px",
+        "width": "22px",
+        "transform": "rotate(115deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveL-Gathering",
+    "title": "Health (All Troops)",
+    "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fourL-Gathering"],
+    "dependenciesTitles": ["Gathering Mastery (Wood)"],
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "136px",
+      "top": "466px"
+    },
+    "lines": [
+      {
+        "top": "-2px",
+        "left": "12px",
+        "width": "22px",
+        "transform": "rotate(145deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveR-Gathering",
+    "title": "Health (All Troops)",
+    "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fourR-Gathering"],
+    "dependenciesTitles": ["Gathering Mastery (Gold)"],
+    "values": [[0.5]],
+    "coordinate": {
+      "left": "74px",
+      "top": "356px"
+    },
+    "lines": [
+      {
+        "top": "-2px",
+        "left": "12px",
+        "width": "24px",
+        "transform": "rotate(145deg)"
+      }
+    ]
+  },
+  {
+    "name": "fiveC-Gathering",
+    "title": "Health (All Troops)",
+    "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fourC-Gathering","fiveL-Gathering", "fiveR-Gathering"],
+    "dependenciesTitles": ["March Speed (All Troops)", "Attack (All Troops)", "Defense (All Troops)"],
+    "values": [[0.5, 1]],
+    "coordinate": {
+      "left": "104px",
+      "top": "410px"
+    },
+    "lines": [
+      {
+        "top": "-2px",
+        "left": "12px",
+        "width": "22px",
+        "transform": "rotate(145deg)"
+      },
+      {
+        "top": "-18px",
+        "left": "-30px",
+        "width": "48px",
+        "transform": "rotate(62deg)"
+      },
+      {
+        "top": "36px",
+        "left": "0px",
+        "width": "50px",
+        "transform": "rotate(62deg)"
+      }
+    ]
+  },
+  {
+    "name": "sixL-Gathering",
+    "title": "Armed Convoy",
+    "description": "Increase troop defense by <b>{0}%</b> while gathering resources on the map.",
+    "imageName": "yellowWoodShield",
+    "size": "talent-image",
+    "dependencies": ["fiveL-Gathering"],
+    "dependenciesTitles": ["Attack (All Troops)"],
+    "values": [[5,10,15]],
+    "coordinate": {
+      "left": "104px",
+      "top": "477px"
+    },
+    "lines": [
+      {
+        "top": "6px",
+        "left": "24px",
+        "width": "12px",
+        "transform": "rotate(145deg)"
+      }
+    ]
+  },
+  {
+    "name": "sixR-Gathering",
+    "title": "The More The Better",
+    "description": "Troops led by this commander receive an additional <b>{0}%</b> resources upon completion of gathering.",
+    "imageName": "yellowSack",
+    "size": "talent-image",
+    "dependencies": ["fiveR-Gathering"],
+    "dependenciesTitles": ["Defense (All Troops)"],
+    "values": [[2,4,6]],
+    "coordinate": {
+      "left": "42px",
+      "top": "369px"
+    },
+    "lines": [
+      {
+        "top": "4px",
+        "left": "24px",
+        "width": "12px",
+        "transform": "rotate(145deg)"
+      }
+    ]
+  },
+  {
+    "name": "sixRM-Gathering",
+    "title": "Defense (All Troops)",
+    "description": "Increase the defense of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fiveC-Gathering"],
+    "dependenciesTitles": ["Health (All Troops)"],
+    "values": [[0.5, 1,1.5]],
+    "coordinate": {
+      "left": "74px",
+      "top": "410px"
+    },
+    "lines": [
+      {
+        "top": "8px",
+        "left": "12px",
+        "width": "22px",
+        "transform": "rotate(185deg)"
+      }
+    ]
+  },
+  {
+    "name": "sixLM-Gathering",
+    "title": "Attack (All Troops)",
+    "description": "Increase the attack of all units led by this commander by <b>{0}%</b>.",
+    "imageName": "genericYellow",
+    "size": "talent-image-small",
+    "dependencies": ["fiveC-Gathering"],
+    "dependenciesTitles": ["Health (All Troops)"],
+    "values": [[0.5, 1,1.5]],
+    "coordinate": {
+      "left": "94px",
+      "top": "441px"
+    },
+    "lines": [
+      {
+        "top": "-7px",
+        "left": "6px",
+        "width": "18px",
+        "transform": "rotate(110deg)"
+      }
+    ]
+  },
+  {
+    "name": "sevenC-Gathering",
+    "title": "Superior Tools",
+    "description": "Increases gathering speed of all kinds of resources by <b>{0}%</b>.",
+    "imageName": "yellowScyth",
+    "size": "talent-image",
+    "dependencies": ["sixL-Gathering", "sixR-Gathering"],
+    "dependenciesTitles": ["Armed Convoy", "The More The Better"],
+    "values": [[5,10,15,20,25]],
+    "coordinate": {
+      "left": "42px",
+      "top": "440px"
+    },
+    "lines": [
+      {
+        "top": "-20px",
+        "left": "-8px",
+        "width": "48px",
+        "transform": "rotate(90deg)"
+      },
+      {
+        "top": "32px",
+        "left": "22px",
+        "width": "48px",
+        "transform": "rotate(1650deg)"
+      }
+    ]
+  }
+]

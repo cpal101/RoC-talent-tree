@@ -8,12 +8,16 @@ import { RouterModule } from '@angular/router';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBug, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { MainSideComponent } from './main-side/main-side.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 library.add(faBug, faCodeBranch);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainSideComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,13 @@ library.add(faBug, faCodeBranch);
       [
         { path: '', loadChildren: '@src/talent-list/talents.module#TalentsModule' }
       ]
-    )
+    ),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

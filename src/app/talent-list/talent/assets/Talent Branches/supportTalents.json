@@ -1,0 +1,458 @@
+[
+    {
+        "name": "MainSupport",
+        "title": "March Speed (All Troops)",
+        "description": "Increase the march speed of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[3]],
+        "coordinate": {
+          "left": "333px",
+          "top": "320px"
+        },
+        "lines": [
+          {
+            "top": "2px",
+            "left": "-11px",
+            "width": "15px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "twoL-Support",
+        "title": "Attack (All Troops)",
+        "description": "Increase the attack of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5,1,1.5]],
+        "dependencies": ["MainSupport"],
+        "dependenciesTitles": ["March Speed (All Troops)"],
+        "coordinate": {
+          "left": "360px",
+          "top": "283px"
+        },
+        "lines": [
+          {
+            "top": "28px",
+            "left": "-22px",
+            "width": "34px",
+            "transform": "rotate(125deg)"
+          }
+        ]
+      },
+      {
+        "name": "twoR-Support",
+        "title": "Defense (All Troops)",
+        "description": "Increase the defense of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5,1,1.5]],
+        "dependencies": ["MainSupport"],
+        "dependenciesTitles": ["March Speed (All Troops)"],
+        "coordinate": {
+          "left": "338px",
+          "top": "366px"
+        },
+        "lines": [
+          {
+            "top": "-12px",
+            "left": "-12px",
+            "width": "36px",
+            "transform": "rotate(85deg)"
+          }
+        ]
+      },
+      {
+        "name": "threeLM-Support",
+        "title": "Hasty Departure",
+        "description": "When troops led by this commander depart from a structure, increase march speed by <b>{0}%</b> for the next 10 seconds.",
+        "imageName": "blueStag",
+        "size": "talent-image",
+        "values": [[20, 25, 30]],
+        "dependencies": ["twoL-Support", "fourL-Support"],
+        "dependenciesTitles": ["Attack (All Troops)", "Attack (All Troops)"],
+        "coordinate": {
+          "left": "384px",
+          "top": "315px"
+        },
+        "lines": [
+          {
+            "top": "2px",
+            "left": "26px",
+            "width": "33px",
+            "transform": "rotate(160deg)"
+          },
+          {
+            "top": "-4px",
+            "left": "-20px",
+            "width": "32px",
+            "transform": "rotate(60deg)"
+          }
+        ]
+      },
+      {
+        "name": "threeRM-Support",
+        "title": "Elixir",
+        "description": "Enhance healing effect received by troops by <b>{0}%</b>.",
+        "imageName": "bluePotion",
+        "size": "talent-image",
+        "values": [[3,6,9]],
+        "dependencies": ["fourR-Support", "twoR-Support"],
+        "dependenciesTitles": ["Defense (All Troops)", "Defense (All Troops)"],
+        "coordinate": {
+          "left": "373px",
+          "top": "348px"
+        },
+        "lines": [
+          {
+            "top": "43px",
+            "left": "8px",
+            "width": "45px",
+            "transform": "rotate(245deg)"
+          },
+          {
+            "top": "23px",
+            "left": "-20px",
+            "width": "25px",
+            "transform": "rotate(165deg)"
+          }
+        ]
+      },
+      {
+        "name": "threeL-Support",
+        "title": "Burning Blood",
+        "description": "Normal attack grant an additional <b>{0}</b> rage.",
+        "imageName": "blueFlameSkull",
+        "size": "talent-image",
+        "values": [[3,6,9]],
+        "dependencies": ["twoL-Support"],
+        "dependenciesTitles": ["Attack (All Troops)"],
+        "coordinate": {
+          "left": "398px",
+          "top": "280px"
+        },
+        "lines": [
+          {
+            "top": "12px",
+            "left": "-22px",
+            "width": "25px",
+            "transform": "rotate(175deg)"
+          }
+        ]
+      },
+      {
+        "name": "threeR-Support",
+        "title": "Loose Formation",
+        "description": "Reduce skill damage taken by <b>{0}%</b>.",
+        "imageName": "blueWaves",
+        "size": "talent-image",
+        "values": [[3,6,9]],
+        "dependencies": ["twoR-Support"],
+        "dependenciesTitles": ["Defense (All Troops)"],
+        "coordinate": {
+          "left": "365px",
+          "top": "393px"
+        },
+        "lines": [
+          {
+            "top": "-2px",
+            "left": "-18px",
+            "width": "25px",
+            "transform": "rotate(45deg)"
+          }
+        ]
+      },
+      {
+        "name": "fourLM-Support",
+        "title": "Health (All Troops)",
+        "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5,1,1.5]],
+        "dependencies": ["threeLM-Support"],
+        "dependenciesTitles": ["Hasty Departure"],
+        "coordinate": {
+          "left": "424px",
+          "top": "333px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-16px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fourRM-Support",
+        "title": "Health (All Troops)",
+        "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[3,6,9]],
+        "dependencies": ["threeRM-Support"],
+        "dependenciesTitles": ["Health (All Troops)"],
+        "coordinate": {
+          "left": "413px",
+          "top": "366px"
+        },
+        "lines": [
+          {
+            "top": "3px",
+            "left": "-14px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fourL-Support",
+        "title": "Attack (All Troops)",
+        "description": "Increase the attack of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5,1]],
+        "dependencies": ["threeL-Support"],
+        "dependenciesTitles": ["Burning Blood"],
+        "coordinate": {
+          "left": "438px",
+          "top": "298px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-14px",
+            "width": "16px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fourR-Support",
+        "title": "Defense (All Troops)",
+        "description": "Increase the defense of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5,1]],
+        "dependencies": ["threeR-Support"],
+        "dependenciesTitles": ["Loose Formation"],
+        "coordinate": {
+          "left": "405px",
+          "top": "411px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-15px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fiveLM-Support",
+        "title": "Expert Design",
+        "description": "Increase the attack, defense and health of siege units by <b>{0}%</b>.",
+        "imageName": "blueGearWheel",
+        "size": "talent-image",
+        "values": [[2,4,6]],
+        "dependencies": ["fourLM-Support"],
+        "dependenciesTitles": ["Health (All Troops)"],
+        "coordinate": {
+          "left": "454px",
+          "top": "343px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-16px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fiveRM-Support",
+        "title": "Counterattack",
+        "description": "When healed, troops led by this commander will have their attack increased by <b>{0}%</b> for the next 3 seconds.",
+        "imageName": "blueMuscles",
+        "size": "talent-image",
+        "values": [[3,6,9]],
+        "dependencies": ["fourRM-Support"],
+        "dependenciesTitles": ["Health (All Troops)"],
+        "coordinate": {
+          "left": "443px",
+          "top": "376px"
+        },
+        "lines": [
+          {
+            "top": "3px",
+            "left": "-14px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fiveL-Support",
+        "title": "Attack (All Troops)",
+        "description": "Increase the attack of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5]],
+        "dependencies": ["fourL-Support"],
+        "dependenciesTitles": ["Attack (All Troops)"],
+        "coordinate": {
+          "left": "468px",
+          "top": "308px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-14px",
+            "width": "16px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "fiveR-Support",
+        "title": "Defense (All Troops)",
+        "description": "Increase the defense of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5]],
+        "dependencies": ["fourR-Support"],
+        "dependenciesTitles": ["Defense (All Troops)"],
+        "coordinate": {
+          "left": "435px",
+          "top": "421px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-15px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "sixL-Support",
+        "title": "March Speed (All Troops)",
+        "description": "Increase the march speed of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[3,6]],
+        "dependencies": ["fiveL-Support"],
+        "dependenciesTitles": ["Attack (All Troops)"],
+        "coordinate": {
+          "left": "498px",
+          "top": "318px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-14px",
+            "width": "16px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "sixR-Support",
+        "title": "Health (All Troops)",
+        "description": "Increase the health of all units led by this commander by <b>{0}%</b>.",
+        "imageName": "genericBlue",
+        "size": "talent-image-small",
+        "values": [[0.5,1]],
+        "dependencies": ["fiveR-Support"],
+        "dependenciesTitles": ["Defense (All Troops)"],
+        "coordinate": {
+          "left": "465px",
+          "top": "431px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-15px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "sevenL-Support",
+        "title": "Rejuvenate",
+        "description": "Instantly restores <b>{0}</b> rage whenever a skill is used.",
+        "imageName": "blueHand",
+        "size": "talent-image",
+        "values": [[50,100,150]],
+        "dependencies": ["sixL-Support"],
+        "dependenciesTitles": ["March Speed (All Troops)"],
+        "coordinate": {
+          "left": "528px",
+          "top": "328px"
+        },
+        "lines": [
+          {
+            "top": "4px",
+            "left": "-14px",
+            "width": "16px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "sevenR-Support",
+        "title": "Emergency Protection",
+        "description": "When troops led by this commander take skill damage, there is a 50% chance that they will gain an additional <b>{0}%</b> skill damage reduction for the next 3 seconds.",
+        "imageName": "blueCrossShield",
+        "size": "talent-image",
+        "values": [[5,10,15]],
+        "dependencies": ["sixR-Support"],
+        "dependenciesTitles": ["Health (All Troops)"],
+        "coordinate": {
+          "left": "495px",
+          "top": "436px"
+        },
+        "lines": [
+          {
+            "top": "8px",
+            "left": "-15px",
+            "width": "18px",
+            "transform": "rotate(200deg)"
+          }
+        ]
+      },
+      {
+        "name": "eightC-Support",
+        "title": "Cage of Thorns",
+        "description": "After using an active skill, reduces march speed of nearby enemy troops by <b>{0}%</b>. (Duration: 3 seconds; maximum 5 targets.)",
+        "imageName": "blueThorns",
+        "size": "talent-image",
+        "values": [[5,10,15]],
+        "dependencies": ["sevenR-Support", "sevenL-Support"],
+        "dependenciesTitles": ["Emergency Protection", "Rejuvenate"],
+        "coordinate": {
+          "left": "535px",
+          "top": "390px"
+        },
+        "lines": [
+          {
+            "top": "-18px",
+            "left": "-10px",
+            "width": "38px",
+            "transform": "rotate(80deg)"
+          },
+          {
+            "top": "38px",
+            "left": "-24px",
+            "width": "38px",
+            "transform": "rotate(140deg)"
+          }
+        ]
+      }    
+]
