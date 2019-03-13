@@ -41,7 +41,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <h3>RoC Talent Creator <span>Beta</span></h3>\r\n    <nav>\r\n        <a href=\"https://github.com/Nkmol/RoC-talent-tree\"><fa-icon icon=\"code-branch\"></fa-icon></a>\r\n        <a href=\"https://github.com/Nkmol/RoC-talent-tree/issues\"><fa-icon icon=\"bug\"></fa-icon></a>\r\n    </nav>\r\n</header>\r\n<div style=\"margin-block-start: 1em;margin-block-end: 1em;\"></div>\r\n<!-- <app-talent-list></app-talent-list> -->\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<header>\r\n    <h3>RoC Talent Creator <span>Beta</span></h3>\r\n    <nav>\r\n        <a href=\"https://github.com/cpal101/RoC-talent-tree\"><fa-icon icon=\"code-branch\"></fa-icon></a>\r\n        <a href=\"https://github.com/cpal101/RoC-talent-tree/issues\"><fa-icon icon=\"bug\"></fa-icon></a>\r\n    </nav>\r\n</header>\r\n<div style=\"margin-block-start: 1em;margin-block-end: 1em;\"></div>\r\n<!-- <app-talent-list></app-talent-list> -->\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
