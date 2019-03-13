@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish-pages": "ng build --base-href \"https://Nkmol.github.io/RoC-talent-tree/\" && ngh --dir=dist/Roc-talent-tree"
+    "publish-pages": "ng build --base-href \"https://cpal101.github.io/RoC-talent-tree/\" && ngh --dir=dist/Roc-talent-tree"
   },
   "private": true,
   "dependencies": {
